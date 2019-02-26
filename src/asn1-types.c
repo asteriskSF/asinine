@@ -493,6 +493,8 @@ tag_to_string(asn1_tag_t tag) {
 		case_for(ASN1_TAG_UTCTIME);
 		case_for(ASN1_TAG_GENERALIZEDTIME);
 		case_for(ASN1_TAG_VISIBLESTRING);
+                default:
+                return "unknown";
 	}
 #undef case_for
 	return "(INVALID)";
