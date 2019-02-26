@@ -72,7 +72,10 @@ typedef enum asn1_tag {
 	ASN1_TAG_IA5STRING       = 22,
 	ASN1_TAG_UTCTIME         = 23,
 	ASN1_TAG_GENERALIZEDTIME = 24,
-	ASN1_TAG_VISIBLESTRING   = 26
+	ASN1_TAG_VISIBLESTRING   = 26,
+#ifdef ASN1_TAG_MINIMAL_CONTAINER_SIZE_WORKAROUND
+    ASN1_TAG_MAX=0xFFFFFF       //workaround for compile option allowing minimal container size enum  
+#endif
 } asn1_tag_t;
 
 typedef enum asn1_encoding {
